@@ -1,0 +1,28 @@
+[
+  {
+    "question": "You're driving at night with your headlights on main beam. A vehicle is overtaking you. When should you dip you headlights?",
+    "answers": ["As soon as the vehicle passes you", 
+      "Only if the other driver dips their headlights", 
+      "Some time after the behicle has passes you", 
+      "Before the vehicle starts to pass you"],
+    "correct": "As soon as the vehicle passes you"
+  },
+
+  {
+    "question": "When would you use the right-hand lane of a two-lane dual carriageway?",
+    "answers": ["When you're travelling at a constant high speed", 
+      "When you're turning right or overtaking", 
+      "When you're passing a side road on the left", 
+      "When you're staying at the minimum allowed speed"],
+    "correct": "When you're turning right or overtaking"
+  },
+
+  {
+    "question": "Why is it particulary important to check your vehicle before making a long motorway journey?",
+    "answers": ["The road surface will wear down the tyres faster", 
+      "Continuous high speeds increase the risk of your vehicle breaking down", 
+      "You'll have to do more harsh braking on motorways", 
+      "Motorway services areas don't deal with breakdowns"],
+    "correct": "When you're turning right or overtaking"
+  }
+]

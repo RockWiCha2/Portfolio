@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furry Friends Meet The Dogs</title>
+    <link rel="stylesheet" href="StyleSheets/meetthedogs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        
+        <div class="navbar">
+            <div class="logo">
+                <a href="HomePage.html">
+                    <img src="Assets/Images/FF Logo.png" alt="Furry Friends Logo">
+                </a>
+            </div>
+            <ul>
+                <li><a href="MeetTheDogs.html">Meet The Dogs</a></li>
+                <li><a href="OurAim.html">Our Aim</a></li>
+                <li><a href="BookVisit.html">Book a Visit</a></li>
+                <li><a href="ContactUs.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            
+            <div class="doggridtitle">
+                <h1>Meet Alfie, our dog of the month!</h1>
+            </div>
+            <p class="hint-text">Hover over the dogs below to find out more!</p>
+    
+            <!-- Dog of the Month Section (Added Below the Grid) -->
+            <div class="dog-month-section">
+                <div class="dog-month-card">
+                    <img src="Assets/Images/Meet-Dogs-Images/Dog2-YellowLab.jpg" alt="Dog of the Month">
+                    <div class="dog-month-overlay">
+                        <h2>Meet Alfie</h2>
+                        <button onclick="openDogMonthPopup()">More Info <span>&rarr;</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dog of the Month Popup -->
+            <div class="dog-month-popup" id="dogMonthPopup">
+                <div class="dog-month-popup-content">
+                    <span class="close-btn" onclick="closeDogMonthPopup()">&times;</span>
+                    <h2>Alfie – Dog of the Month 🐾</h2>
+                    <p>Alfie is a playful young labrador, who always brings a smile to visitors' faces. He's known for his love of sausages, toys, and always being the first to greet visitors at our therapy sessions!</p>
+                </div>
+            </div>
+
+            <div class="doggridtitle">
+                <h1>Meet the rest of our team</h1>
+            </div>
+
+            <div class="doggrid">
+                <div class="dog-card" onclick="toggleInfo(this)">
+                    <img src="Assets/Images/Meet-Dogs-Images/Dog1-Pug.webp" alt="Image of bella the pug">
+                    <div class="dog-info">
+                        <div class="dog-name">Meet Bella</div>
+                        <div class="dog-details">Bella is a playful 3-year-old pug who loves cuddles and cheese.</div>
+                    </div>
+                </div>
+
+                <div class="dog-card" onclick="toggleInfo(this)">
+                    <img src="Assets/Images/Meet-Dogs-Images/Dog2-YellowLab.jpg" alt="Image of alfie the yellow lab">
+                    <div class="dog-info">
+                        <div class="dog-name">Meet Alfie</div>
+                        <div class="dog-details">Alfie is a gentle yellow lab who adores children and long walks.</div>
+                    </div>
+                </div>
+
+                <div class="dog-card" onclick="toggleInfo(this)">
+                    <img src="Assets/Images/Meet-Dogs-Images/Dog3-Ziggy.png" alt="Image of Ziggy the fox red labrador cross">
+                    <div class="dog-info">
+                        <div class="dog-name">Meet Ziggy</div>
+                        <div class="dog-details">Ziggy is handsome fox red labrador-spaniel mix, who loves diet coke and walks</div>
+                    </div>
+                </div>
+
+                <div class="dog-card" onclick="toggleInfo(this)">
+                    <img src="Assets/Images/Meet-Dogs-Images/Dog4-Setter.png" alt="Image of Luthor the Irish Setter">
+                    <div class="dog-info">
+                        <div class="dog-name">Meet Luthor</div>
+                        <div class="dog-details">Luthor is a excitable Irish Setter who brings peace and comfort wherever he goes.</div>
+                    </div>
+                </div>
+
+                <div class="dog-card" onclick="toggleInfo(this)">
+                    <img src="Assets/Images/Meet-Dogs-Images/Dog4-Setter.png" alt="Image of Luthor the Irish Setter">
+                    <div class="dog-info">
+                        <div class="dog-name">Meet Luthor</div>
+                        <div class="dog-details">Luthor is a excitable Irish Setter who brings peace and comfort wherever he goes.</div>
+                    </div>
+                </div>
+
+                <div class="dog-card" onclick="toggleInfo(this)">
+                    <img src="Assets/Images/Meet-Dogs-Images/Dog4-Setter.png" alt="Image of Luthor the Irish Setter">
+                    <div class="dog-info">
+                        <div class="dog-name">Meet Luthor</div>
+                        <div class="dog-details">Luthor is a excitable Irish Setter who brings peace and comfort wherever he goes.</div>
+                    </div>
+                </div>
+
+                <div class="dog-card" onclick="toggleInfo(this)">
+                    <img src="Assets/Images/Meet-Dogs-Images/Dog4-Setter.png" alt="Image of Luthor the Irish Setter">
+                    <div class="dog-info">
+                        <div class="dog-name">Meet Luthor</div>
+                        <div class="dog-details">Luthor is a excitable Irish Setter who brings peace and comfort wherever he goes.</div>
+                    </div>
+                </div>
+
+                <div class="dog-card" onclick="toggleInfo(this)">
+                    <img src="Assets/Images/Meet-Dogs-Images/Dog4-Setter.png" alt="Image of Luthor the Irish Setter">
+                    <div class="dog-info">
+                        <div class="dog-name">Meet Luthor</div>
+                        <div class="dog-details">Luthor is a excitable Irish Setter who brings peace and comfort wherever he goes.</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <ul>
+                <li><a href="https://x.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+                <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+                <li><a href="https://youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i> YouTube</a></li>
+                <li><a href="https://www.google.com/maps/place/Furry+Friends+INC/@51.357926,-0.68376,1427m/data=!3m1!1e3!4m6!3m5!1s0x48767f53a77aa039:0xfae2b2252106684f!8m2!3d51.3579257!4d-0.6837604!16s%2Fg%2F11m637sj1w?hl=en&entry=ttu&g_ep=EgoyMDI1MDMzMC4wIKXMDSoASAFQAw%3D%3D" target="_blank"><i class="fa-solid fa-location-dot"></i> Come Visit Us!</a></li>
+              </ul>
+        </div>
+    </div>
+
+    <script>
+        function toggleInfo(card) {
+            card.classList.toggle('expanded');
+        }
+
+        function openDogMonthPopup() {
+            document.getElementById("dogMonthPopup").style.display = "flex";
+        }
+
+        function closeDogMonthPopup() {
+            document.getElementById("dogMonthPopup").style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            const popup = document.getElementById("dogMonthPopup");
+            if (event.target === popup) {
+                popup.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

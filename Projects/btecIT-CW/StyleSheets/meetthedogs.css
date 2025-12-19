@@ -1,0 +1,366 @@
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 960px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar */
+.navbar {
+    background: #373743;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 70px;
+    display: block;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px; 
+    border: 2px solid #dd7703; 
+    border-radius: 5px; 
+    display: inline-block; 
+    box-sizing: border-box;
+}
+
+.navbar ul li a:hover {
+    outline: 1px solid #dd7703;
+}
+
+/* Footer */
+.footer {
+    background: #373743;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.footer ul li {
+    margin-left: 15px;
+}
+
+.footer ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px; 
+    border: 2px solid #dd7703; 
+    border-radius: 5px; 
+    display: inline-block; 
+    box-sizing: border-box;
+}
+
+/* Page Content */
+.content {
+    padding: 20px;
+    flex: 1;
+    padding-bottom: 100px;
+}
+
+/* Meet The Dogs Grid */
+.doggrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.dog-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.dog-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+.dog-card:hover {
+    transform: scale(1.03);
+}
+
+/* Info panel for hover and click */
+.dog-info {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.3s ease, height 0.3s ease;
+    font-weight: bold;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height: 40px;
+    cursor: pointer;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+    box-sizing: border-box;
+}
+
+.dog-card:hover .dog-info {
+    transform: translateY(0);
+}
+
+.dog-card.expanded .dog-info {
+    transform: translateY(0);
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Centre both name and details */
+.dog-name {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+.dog-details {
+    display: none;
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 10px;
+    padding: 0 10px;
+    text-align: center;
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.dog-card.expanded .dog-details {
+    display: block;
+}
+
+
+/* Dog of the Month Section */
+.dog-month-section {
+    margin-top: 40px;
+    position: relative;
+}
+
+.dog-month-card {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.dog-month-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 15px;
+}
+
+/* Hover Overlay */
+.dog-month-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.65);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.dog-month-card:hover .dog-month-overlay {
+    opacity: 1;
+}
+
+.dog-month-overlay h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.dog-month-overlay button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background: #dd7703;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.dog-month-overlay button:hover {
+    background: #b35f02;
+}
+
+/* Popup Styles */
+.dog-month-popup {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.dog-month-popup-content {
+    background: white;
+    padding: 30px;
+    max-width: 600px;
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    text-align: center;
+    position: relative;
+    animation: fadeIn 0.3s ease;
+}
+
+.dog-month-popup-content h2 {
+    margin-top: 0;
+}
+
+.dog-month-popup-content .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.dog-month-popup-content .close-btn:hover {
+    color: #000;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.hint-text {
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .footer ul li {
+        margin: 10px 0;
+    }
+
+    .doggrid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .dog-month-overlay h2 {
+        font-size: 24px;
+    }
+
+    .dog-month-overlay button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}

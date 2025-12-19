@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Furry Friends Book a Visit</title>
+  <link rel="stylesheet" href="StyleSheets/bookvisit.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <div class="container">
+
+    <!-- Navbar -->
+    <div class="navbar">
+      <div class="logo">
+        <a href="HomePage.html">
+          <img src="Assets/Images/FF Logo.png" alt="Furry Friends Logo" />
+        </a>
+      </div>
+      <ul>
+        <li><a href="MeetTheDogs.html">Meet The Dogs</a></li>
+        <li><a href="OurAim.html">Our Aim</a></li>
+        <li><a href="BookVisit.html">Book a Visit</a></li>
+        <li><a href="ContactUs.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+      <!-- Main Form Container -->
+<div id="form-container">
+    <h2>Book a Visit</h2>
+    <p><span style="color: red;">*</span> Required fields</p>
+    <form>
+  
+      <!-- First Name Field -->
+      <label for="fname">First Name<span style="color: red;">*</span></label>
+      <input type="text" id="fname" name="fname" required />
+  
+      <!-- Last Name Field -->
+      <label for="lname">Last Name<span style="color: red;">*</span></label>
+      <input type="text" id="lname" name="lname" required />
+  
+      <!-- Email Field -->
+      <label for="email">Email<span style="color: red;">*</span></label>
+      <input type="email" id="email" name="email" required />
+  
+      <!-- Preferred Visit Date Field -->
+      <label for="visit-date">Preferred Visit Date<span style="color: red;">*</span></label>
+      <input type="date" id="visit-date" name="visit-date" required>
+  
+      <!-- Dog Selection Dropdown -->
+      <label for="dog">Which dog would you like to visit?<span style="color: red;">*</span></label>
+      <div class="dog-select-wrapper">
+        <select id="dog" name="dog" required onchange="showDogInfo()">
+          <option value="" disabled selected>Select a dog</option>
+          <option value="Alfie">Alfie</option>
+          <option value="Luthor">Luthor</option>
+          <option value="Bella">Bella</option>
+          <option value="Ziggy">Ziggy</option>
+          <option value="Other">Other / No preference</option>
+        </select>
+  
+        <!-- Dog Image Preview -->
+        <div id="dog-image-wrapper" style="display: none;"></div>
+      </div>
+  
+      <!-- Dog Info Box -->
+      <div id="dog-info" class="dog-info" style="display: none;"></div>
+  
+      <!-- Use HQ Checkbox -->
+      <label>
+        <input type="checkbox" id="use-hq" name="use-hq" onchange="toggleAddress()"> Appointment at Furry Friends HQ
+      </label>
+  
+      <!-- Custom Address Fields (Only shown if HQ is not selected) -->
+      <div id="custom-address-fields">
+        <!-- Address Line 1 -->
+        <label for="address-line1">Address Line 1<span style="color: red;">*</span></label>
+        <input type="text" id="address-line1" name="address-line1" placeholder="123 Example Street">
+  
+        <!-- Address Line 2 -->
+        <label for="address-line2">Address Line 2</label>
+        <input type="text" id="address-line2" name="address-line2" placeholder="Flat / Unit (optional)">
+  
+        <!-- Town/City -->
+        <label for="town">Town/City<span style="color: red;">*</span></label>
+        <input type="text" id="town" name="town" placeholder="Town or City">
+  
+        <!-- Postcode -->
+        <label for="postcode">Postcode<span style="color: red;">*</span></label>
+        <input type="text" id="postcode" name="postcode" placeholder="AB1 2CD">
+      </div>
+  
+      <!-- Enquiry -->
+      <label for="enquiry">Your Enquiry</label>
+      <textarea
+        id="enquiry"
+        name="enquiry"
+        required
+        minlength="10"
+        maxlength="65"
+        placeholder="Ask your question here..."
+      ></textarea>
+  
+      <!-- Submit Button -->
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <ul>
+        <li><a href="https://x.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+        <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+        <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+        <li><a href="https://youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i> YouTube</a></li>
+        <li><a href="https://www.google.com/maps/place/Furry+Friends+INC/@51.357926,-0.68376,1427m/data=!3m1!1e3!4m6!3m5!1s0x48767f53a77aa039:0xfae2b2252106684f!8m2!3d51.3579257!4d-0.6837604!16s%2Fg%2F11m637sj1w?hl=en&entry=ttu&g_ep=EgoyMDI1MDMzMC4wIKXMDSoASAFQAw%3D%3D" target="_blank"><i class="fa-solid fa-location-dot"></i> Come Visit Us!</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    function showDogInfo() {
+      const dog = document.getElementById("dog").value;
+      const dogImageWrapper = document.getElementById("dog-image-wrapper");
+      const dogInfo = document.getElementById("dog-info");
+
+      const dogData = {
+        Alfie: {
+          img: "Assets/Images/Meet-Dogs-Images/Dog2-YellowLab.jpg",
+          info: "Alfie is a calm and loving Labrador who’s perfect for quiet, gentle interactions."
+        },
+        Luthor: {
+          img: "Assets/Images/Meet-Dogs-Images/Dog4-Setter.png",
+          info: "Luthor is an excitable Irish Setter who brings energy and joy wherever he goes."
+        },
+        Bella: {
+          img: "Assets/Images/Meet-Dogs-Images/Dog1-Pug.webp",
+          info: "Bella is a sweet rescue dog who is especially good with children and the elderly."
+        },
+        Ziggy: {
+          img: "Assets/Images/Meet-Dogs-Images/Dog3-Ziggy.png",
+          info: "Ziggy is a gentle giant, who loves sausages and ear scratches!"
+        },
+        Other: {
+          img: null,
+          info: "If you're not sure which dog you want to see, we'll match you with the perfect furry friend!"
+        }
+      };
+
+      dogImageWrapper.innerHTML = "";
+      dogImageWrapper.style.display = "none";
+      dogInfo.style.display = "none";
+
+      if (dogData[dog]) {
+        dogInfo.innerText = dogData[dog].info;
+        dogInfo.style.display = "block";
+
+        if (dogData[dog].img) {
+          const img = document.createElement("img");
+          img.src = dogData[dog].img;
+          img.alt = dog + " photo";
+          img.style.width = "80px";
+          img.style.height = "80px";
+          img.style.borderRadius = "10px";
+          img.style.border = "2px solid #dd7703";
+          img.style.objectFit = "cover";
+          dogImageWrapper.appendChild(img);
+          dogImageWrapper.style.display = "block";
+        }
+      }
+    }
+
+    function toggleAddress() {
+      const useHQ = document.getElementById("use-hq").checked;
+      const addressFields = document.getElementById("custom-address-fields");
+      addressFields.style.display = useHQ ? "none" : "block";
+    }
+
+    window.onload = () => {
+      toggleAddress();
+    };
+  </script>
+</body>
+</html>

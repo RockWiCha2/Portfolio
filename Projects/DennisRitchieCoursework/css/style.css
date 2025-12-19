@@ -1,0 +1,144 @@
+/* =========================
+   Global base styles
+   ========================= */
+
+/* Set the default font for the whole site */
+body {
+  font-family: "Times New Roman", Times, serif;
+}
+
+
+/* =========================
+   Header and navigation bar
+   ========================= */
+
+/* Header container with background and bottom border */
+header {
+  background: #f0f0f0;
+  padding: 20px;
+  border-bottom: 2px solid #ccc;
+}
+
+/* Main site title styling */
+header h1 {
+  margin: 0 0 10px 0;
+  font-size: 28px;
+}
+
+/* Navigation list laid out horizontally using flexbox */
+nav ul {
+  list-style: none;         /* Remove default bullet points */
+  margin: 0;                /* Remove default margin */
+  padding: 0;               /* Remove default padding */
+  display: flex;            /* Lay items out in a row */
+  gap: 15px;                /* Space between buttons */
+  justify-content: flex-start; /* Align buttons to the left */
+  align-items: center;      /* Vertically centre buttons */
+  padding-top: 10px;        /* Space above the nav buttons */
+}
+
+/* Navigation links styled as equal-sized buttons */
+nav ul li a {
+  display: flex;                            /* Centre text horizontally and vertically */
+  align-items: center;
+  justify-content: center;
+  height: 70px;                             /* Fixed height for all buttons */
+  padding: 0 20px;                          /* Horizontal padding inside buttons */
+  background: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-decoration: none;                    /* Remove underline */
+  color: #4b0082;                           /* Dark purple text colour */
+  font-weight: 600;
+  width: 180px;                             /* Fixed width so all buttons match */
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow under buttons */
+  transition: background 0.2s ease,
+              border-color 0.2s ease,
+              box-shadow 0.2s ease;         /* Smooth hover transition */
+}
+
+/* Hover effect for navigation buttons */
+nav ul li a:hover {
+  background: #f2f0ff;                      /* Light purple background on hover */
+  border-color: #b190ff;                    /* Slightly darker border on hover */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================
+   Main layout (content + sidebar)
+   ========================= */
+
+/* Flex container holding the main content and sidebar */
+.layout {
+  display: flex;      /* Place main content and sidebar side by side */
+  gap: 20px;          /* Space between main content and sidebar */
+  margin: 20px;       /* Space around the whole layout */
+}
+
+/* Main content area on the left takes up remaining space */
+.main-content {
+  flex: 1;            /* Grow to fill available space */
+  margin-left: 50px;  /* Space from the left edge of the page */
+}
+
+/* Paragraph styling inside the main content area */
+.main-content p {
+  font-size: 20px;    /* Slightly larger text for readability */
+  line-height: 1.6;   /* Comfortable line spacing */
+}
+
+
+/* =========================
+   Sidebar styles (right column)
+   ========================= */
+
+/* Sidebar container on the right */
+.sidebar {
+  width: 350px;          /* Fixed width so layout is consistent */
+  background: #f5f5f5;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-right: 50px;    /* Space from the right edge of the page */
+}
+
+/* Sidebar table layout */
+.sidebar table {
+  width: 100%;           /* Table fills the sidebar width */
+  border-collapse: collapse;
+}
+
+/* Table header and cell styling */
+.sidebar th,
+.sidebar td {
+  padding: 8px;
+  border-bottom: 1px solid #ccc;  /* Line between rows */
+}
+
+/* Sidebar image (Dennis Ritchie photo) */
+.sidebar img {
+  width: 75%;            /* Slightly narrower than sidebar for breathing room */
+  height: auto;          /* Keep original aspect ratio */
+  display: block;
+  margin: 0 auto;        /* Centre the image horizontally */
+  border-radius: 8px;    /* Rounded corners to match sidebar */
+}
+
+
+/* =========================
+   Responsive behaviour
+   ========================= */
+
+/* Stack main content and sidebar vertically on smaller screens */
+@media (max-width: 800px) {
+  .layout {
+    flex-direction: column;  /* Put main content on top of sidebar */
+  }
+
+  .sidebar {
+    width: 100%;             /* Sidebar becomes full-width on small screens */
+    margin-right: 0;         /* Remove right margin so it fits nicely */
+  }
+}

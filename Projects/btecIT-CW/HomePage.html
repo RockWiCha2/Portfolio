@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furry Friends Homepage</title>
+    <link rel="stylesheet" href="StyleSheets/homepage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="HomePage.html">
+                    <img src="Assets/Images/FF Logo.png" alt="Furry Friends Logo">
+                </a>
+            </div>
+            <ul>
+                <li><a href="MeetTheDogs.html">Meet The Dogs</a></li>
+                <li><a href="OurAim.html">Our Aim</a></li>
+                <li><a href="BookVisit.html">Book a Visit</a></li>
+                <li><a href="ContactUs.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <div class="topSection">
+                <h1>Welcome To Furry Friends</h1>
+                <p>
+                    Furry Friends is a therapy dog charity based in Hampshire, dedicated to bringing joy, comfort, and companionship through the calming power of dogs. 
+                    Our trained therapy dogs visit care homes, schools, hospitals, and community groups, offering support to those who need it most.
+                    Whether you’re looking to book a visit, volunteer, or simply learn more about what we do — we’re always excited to connect with fellow dog lovers.
+                </p>
+            </div>
+
+            <!-- Image Carousel -->
+            <div class="carousel">
+                <button class="prev" onclick="moveSlide(-1)">❮</button>
+                <div class="carousel-images">
+                    <img src="Assets/Images/Carousel-Images/Cimg1.jpg" class="active" alt="Image of a two young golden retriever puppies">
+                    <img src="Assets/Images/Carousel-Images/Cimg2.jpg" alt="Image of a spaniel sitting in a forest">
+                    <img src="Assets/Images/Carousel-Images/Cimg3.jpg" alt="Image of a dog walking along a seafront">
+                </div>
+                <button class="next" onclick="moveSlide(1)">❯</button>
+            </div>
+
+            <div class="intro-container">
+                <div class="intro-text-section">
+                    <h2>Why Therapy Dogs?</h2>
+                    <p>
+                        Dogs have an incredible ability to lift our spirits, calm our nerves, and brighten even the darkest days. 
+                        At Furry Friends, we believe in the unique bond between people and dogs — and we’ve seen first-hand how powerful that connection can be.
+                        <br><br>Our therapy dogs are gentle, well-trained, and love to meet new people. 
+                        Whether it’s a friendly tail wag or a quiet cuddle, they offer emotional support that words sometimes can’t.</p>
+                </div>
+                <div class="intro-image-section">
+                    <img src="Assets/Images/DogIMG1.jpg" alt="Image of a dog">
+                </div>
+            </div>
+            
+            <div class="review-container">
+                <div class="review-box">
+                    <div class="review-box-title">
+                        <h1>Review - Willow Grove Care Home</h1>
+                    </div>
+                    <div class="review-box-img">
+                        <img src="Assets/Images/Dog Carehome.gif" alt="Therapy Dog with a resident">
+                    </div>
+                    <div class="review-box-text">
+                        <p>
+                            <em>“The visit from Furry Friends completely lit up our residents’ faces. Alfie the labrador was so gentle and patient — even those who rarely speak were smiling and engaging with him. It’s hard to describe just how much these visits mean to us.”</em>
+                            <br><br>
+                            <strong>— Sarah J., Activities Coordinator at Willow Grove Care Home</strong>
+                        </p>
+                    </div>
+                </div>
+            
+                <div class="review-box">
+                    <div class="review-box-title">
+                        <h1>Review - Riverbank Primary School</h1>
+                    </div>
+                    <div class="review-box-img">
+                        <img src="Assets/Images/Dog School.jpg" alt="Therapy Dog with children">
+                    </div>
+                    <div class="review-box-text">
+                        <p>
+                            <em>“My students absolutely adored meeting Bella! She helped create such a calm atmosphere, and it really supported the children with additional needs. We’ll definitely be inviting Furry Friends back again!”</em>
+                            <br><br>
+                            <strong>— Miss Patel, SEN Teacher at Riverbank Primary School</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <ul>
+                <li><a href="https://x.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+                <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+                <li><a href="https://youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i> YouTube</a></li>
+                <li><a href="https://www.google.com/maps/place/Furry+Friends+INC/@51.357926,-0.68376,1427m/data=!3m1!1e3!4m6!3m5!1s0x48767f53a77aa039:0xfae2b2252106684f!8m2!3d51.3579257!4d-0.6837604!16s%2Fg%2F11m637sj1w?hl=en&entry=ttu&g_ep=EgoyMDI1MDMzMC4wIKXMDSoASAFQAw%3D%3D" target="_blank"><i class="fa-solid fa-location-dot"></i> Come Visit Us!</a></li>
+              </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

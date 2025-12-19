@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furry Friends Our Aim</title>
+    <link rel="stylesheet" href="StyleSheets/ouraim.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- NAVBAR -->
+        <div class="navbar">
+            <div class="logo">
+                <a href="HomePage.html"><img src="Assets/Images/FF Logo.png" alt="Furry Friends Logo"></a>
+            </div>
+            <ul>
+                <li><a href="MeetTheDogs.html">Meet The Dogs</a></li>
+                <li><a href="OurAim.html">Our Aim</a></li>
+                <li><a href="BookVisit.html">Book a Visit</a></li>
+                <li><a href="ContactUs.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div class="content"> 
+
+            <!-- Mission Statement -->
+            <div class="mission-statement">
+                <h1><i>“At Furry Friends, our aim is simple: to bring comfort, companionship, and confidence through the power of dog therapy.”</i></h1>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="faq-section">
+                <div class="faq-wrapper">
+
+                    <div class="faq-item" onclick="toggleAnswer(this)">
+                        <div class="faq-inner">
+                            <div class="faq-question">Who do we help?</div>
+                            <div class="faq-answer">
+                                We support children, adults, and the elderly who may be struggling with anxiety, isolation, or special educational needs. 
+                                Our therapy dogs bring companionship, calm and connection to those who need it most.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" onclick="toggleAnswer(this)">
+                        <div class="faq-inner">
+                            <div class="faq-question">Where do the dogs visit?</div>
+                            <div class="faq-answer">
+                                Our dogs visit schools, care homes, hospitals and community centres across Hampshire. 
+                                Visits are arranged regularly and can be tailored to suit the needs of each group.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" onclick="toggleAnswer(this)">
+                        <div class="faq-inner">
+                            <div class="faq-question">Why are therapy dogs so effective?</div>
+                            <div class="faq-answer">
+                                Interacting with dogs has been shown to reduce cortisol (the stress hormone), lower blood pressure, and improve mood. 
+                                Their calm, non-judgemental presence makes them ideal for emotional support, particularly for those who struggle to connect with people.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- FOOTER -->
+        <div class="footer">
+            <ul>
+                <li><a href="https://x.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+                <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+                <li><a href="https://youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i> YouTube</a></li>
+                <li><a href="https://www.google.com/maps/place/Furry+Friends+INC/@51.357926,-0.68376,1427m/data=!3m1!1e3!4m6!3m5!1s0x48767f53a77aa039:0xfae2b2252106684f!8m2!3d51.3579257!4d-0.6837604!16s%2Fg%2F11m637sj1w?hl=en&entry=ttu&g_ep=EgoyMDI1MDMzMC4wIKXMDSoASAFQAw%3D%3D" target="_blank"><i class="fa-solid fa-location-dot"></i> Come Visit Us!</a></li>
+              </ul>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function toggleAnswer(item) {
+            item.classList.toggle('expanded');
+        }
+    </script>
+</body>
+</html>
