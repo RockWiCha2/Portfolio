@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,27 +32,35 @@
 </script>
 
 <body class="bg-slate-950 text-slate-100 antialiased">
+	<a
+		href="#maincontent"
+		class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:text-slate-950"
+	>
+		Skip to main content
+	</a>
+	<span id="top"></span>
 	<!-- Header -->
 	<header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur">
 		<div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
-			<a href="#top" class="font-semibold tracking-tight">JamesHarvey.com</a>
-			<nav class="hidden gap-6 text-sm text-slate-300 md:flex">
-				<a class="hover:text-white" href="#projects">Projects</a>
-				<a class="hover:text-white" href="#skills">Skills</a>
-				<a class="hover:text-white" href="#experience">Experience</a>
-				<a class="hover:text-white" href="#contact">Contact</a>
+			<a href="#top" class="font-semibold tracking-tight focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950">JamesHarvey.com</a>
+			<nav class="hidden gap-6 text-sm text-slate-300 md:flex" aria-label="Primary">
+				<a class="hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950" href="#projects">Projects</a>
+				<a class="hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950" href="#skills">Skills</a>
+				<a class="hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950" href="#experience">Experience</a>
+				<a class="hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950" href="#contact">Contact</a>
 			</nav>
 			<div class="flex items-center gap-3">
 				<a
-					class="rounded-lg border border-white/10 px-3 py-2 text-sm text-slate-200 hover:bg-white/5"
+					class="rounded-lg border border-white/10 px-3 py-2 text-sm text-slate-200 hover:bg-white/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
 					href="https://github.com/RockWiCha2"
 					target="_blank"
-					rel="noreferrer"
+					rel="noreferrer noopener"
+					aria-label="GitHub profile (opens in a new tab)"
 				>
 					GitHub
 				</a>
 				<a
-					class="rounded-lg bg-white px-3 py-2 text-sm font-medium text-slate-950 hover:bg-slate-200"
+					class="rounded-lg bg-white px-3 py-2 text-sm font-medium text-slate-950 hover:bg-slate-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
 					href="#contact"
 				>
 					Hire me
@@ -61,12 +69,12 @@
 		</div>
 	</header>
 
-	<main id="top">
+	<main id="maincontent" tabindex="-1">
 		<!-- Hero -->
 		<section class="mx-auto max-w-6xl px-4 pb-10 pt-14">
 			<div class="grid gap-8 md:grid-cols-2 md:items-center">
 				<div>
-					<p class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-300"><span class="h-2 w-2 rounded-full bg-emerald-400"></span>Open to internships / graduate roles</p>
+					<p class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-300"><span class="h-2 w-2 rounded-full bg-emerald-400" aria-hidden="true"></span>Open to internships / graduate roles</p>
 					<h1 class="mt-4 text-4xl font-semibold tracking-tight md:text-5xl">
 						Computer Science student building
 						<span class="text-slate-300">useful software</span>.
@@ -80,8 +88,9 @@
 							View projects
 						</a>
 						<a
-							class="rounded-lg border border-white/10 px-4 py-2 text-sm text-slate-200 hover:bg-white/5"
+							class="rounded-lg border border-white/10 px-4 py-2 text-sm text-slate-200 hover:bg-white/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
 							href="assets/CV.pdf"
+							aria-label="Download CV (PDF)"
 						>
 							Download CV
 						</a>
@@ -113,14 +122,14 @@
 						I like shipping small, polished things. Here are the links recruiters usually want:
 					</p>
 					<div class="mt-5 grid gap-3">
-						<a class="group rounded-xl border border-white/10 bg-slate-950/40 p-4 hover:bg-white/5" href="https://github.com/RockWiCha2" target="_blank" rel="noreferrer">
+						<a class="group rounded-xl border border-white/10 bg-slate-950/40 p-4 hover:bg-white/5" href="https://github.com/RockWiCha2" target="_blank" rel="noreferrer noopener">
 							<div class="flex items-center justify-between">
 								<span class="font-medium">GitHub</span>
 								<span class="text-slate-400 group-hover:text-slate-200">→</span>
 							</div>
 							<p class="mt-1 text-sm text-slate-400">Code, READMEs, pinned projects</p>
 						</a>
-						<a class="group rounded-xl border border-white/10 bg-slate-950/40 p-4 hover:bg-white/5" href="https://www.linkedin.com/in/james-harvey-10b2b9317/" target="_blank" rel="noreferrer">
+						<a class="group rounded-xl border border-white/10 bg-slate-950/40 p-4 hover:bg-white/5" href="https://www.linkedin.com/in/james-harvey-10b2b9317/" target="_blank" rel="noreferrer noopener">
 							<div class="flex items-center justify-between">
 								<span class="font-medium">LinkedIn</span>
 								<span class="text-slate-400 group-hover:text-slate-200">→</span>
@@ -146,7 +155,7 @@
 					<h2 class="text-2xl font-semibold tracking-tight">Projects</h2>
 					<p class="mt-2 text-slate-300">A few things I’ve built. Each has a clear problem, approach, and result.</p>
 				</div>
-				<a class="hidden text-sm text-slate-300 hover:text-white md:block" href="https://github.com/RockWiCha2" target="_blank" rel="noreferrer">
+				<a class="hidden text-sm text-slate-300 hover:text-white md:block" href="https://github.com/RockWiCha2" target="_blank" rel="noreferrer noopener">
 					View all on GitHub →
 				</a>
 			</div>
@@ -170,10 +179,10 @@
 					</ul>
 
 					<div class="mt-5 flex flex-wrap gap-3">
-						<a class="rounded-lg bg-white px-3 py-2 text-sm font-medium text-slate-950 hover:bg-slate-200" href="Projects/CS-NEA/index.html" target="_blank" rel="noreferrer">
+						<a class="rounded-lg bg-white px-3 py-2 text-sm font-medium text-slate-950 hover:bg-slate-200" href="Projects/CS-NEA/index.html" target="_blank" rel="noreferrer noopener" aria-label="Driving Theory Revision Game live demo (opens in a new tab)">
 							Live demo
 						</a>
-						<a class="rounded-lg border border-white/10 px-3 py-2 text-sm text-slate-200 hover:bg-white/5" href="https://github.com/RockWiCha2/CS-NEA" target="_blank" rel="noreferrer">
+						<a class="rounded-lg border border-white/10 px-3 py-2 text-sm text-slate-200 hover:bg-white/5" href="https://github.com/RockWiCha2/CS-NEA" target="_blank" rel="noreferrer noopener" aria-label="Driving Theory Revision Game source code on GitHub (opens in a new tab)">
 							Source
 						</a>
 					</div>
@@ -197,10 +206,10 @@
 					</ul>
 
 					<div class="mt-5 flex flex-wrap gap-3">
-						<a class="rounded-lg bg-white px-3 py-2 text-sm font-medium text-slate-950 hover:bg-slate-200" href="Projects/btecIT-CW/HomePage.html" target="_blank" rel="noreferrer">
+						<a class="rounded-lg bg-white px-3 py-2 text-sm font-medium text-slate-950 hover:bg-slate-200" href="Projects/btecIT-CW/HomePage.html" target="_blank" rel="noreferrer noopener" aria-label="Therapy Dogs website live demo (opens in a new tab)">
 							Live demo
 						</a>
-						<a class="rounded-lg border border-white/10 px-3 py-2 text-sm text-slate-200 hover:bg-white/5" href="https://github.com/RockWiCha2/btecIT-CW" target="_blank" rel="noreferrer">
+						<a class="rounded-lg border border-white/10 px-3 py-2 text-sm text-slate-200 hover:bg-white/5" href="https://github.com/RockWiCha2/btecIT-CW" target="_blank" rel="noreferrer noopener" aria-label="Therapy Dogs website source code on GitHub (opens in a new tab)">
 							Source
 						</a>
 					</div>
@@ -223,10 +232,10 @@
 					</ul>
 
 					<div class="mt-5 flex flex-wrap gap-3">
-						<a class="rounded-lg bg-white px-3 py-2 text-sm font-medium text-slate-950 hover:bg-slate-200" href="Projects/DennisRitchieCoursework/index.html" target="_blank" rel="noreferrer">
+						<a class="rounded-lg bg-white px-3 py-2 text-sm font-medium text-slate-950 hover:bg-slate-200" href="Projects/DennisRitchieCoursework/index.html" target="_blank" rel="noreferrer noopener" aria-label="Dennis Ritchie website live demo (opens in a new tab)">
 							Live demo
 						</a>
-						<a class="rounded-lg border border-white/10 px-3 py-2 text-sm text-slate-200 hover:bg-white/5" href="https://github.com/RockWiCha2/DennisRitchieCoursework" target="_blank" rel="noreferrer">
+						<a class="rounded-lg border border-white/10 px-3 py-2 text-sm text-slate-200 hover:bg-white/5" href="https://github.com/RockWiCha2/DennisRitchieCoursework" target="_blank" rel="noreferrer noopener" aria-label="Dennis Ritchie website source code on GitHub (opens in a new tab)">
 							Source
 						</a>
 					</div>
@@ -251,7 +260,7 @@
 					</ul>
 
 					<div class="mt-5 flex flex-wrap gap-3">           
-						<a class="rounded-lg border border-white/10 px-3 py-2 text-sm text-slate-200 hover:bg-white/5" href="https://github.com/RockWiCha2/TextBasedAdventureGame" target="_blank" rel="noreferrer">
+						<a class="rounded-lg border border-white/10 px-3 py-2 text-sm text-slate-200 hover:bg-white/5" href="https://github.com/RockWiCha2/TextBasedAdventureGame" target="_blank" rel="noreferrer noopener" aria-label="Text-Based Adventure Game source code on GitHub (opens in a new tab)">
 							Source
 						</a>
 					</div>
@@ -310,7 +319,7 @@
 				<div class="rounded-2xl border border-white/10 bg-white/5 p-6">
 					<div class="flex items-center gap-4">
 						<div class="flex h-12 w-12 items-center justify-center rounded-lg border border-white/10 bg-slate-950/50 text-xs text-slate-400">
-							<img src="Assets/Logos/stemambassadors_logo.jpeg">
+							<img src="Assets/Logos/stemambassadors_logo.jpeg" alt="STEM Ambassadors logo" loading="lazy" decoding="async">
 						</div>
 						<div class="flex flex-wrap items-center justify-between gap-3 w-full">
 							<div>
@@ -347,7 +356,7 @@
 				<div class="rounded-2xl border border-white/10 bg-white/5 p-6">
 					<div class="flex items-center gap-4">
 						<div class="flex h-12 w-12 items-center justify-center rounded-lg border border-white/10 bg-slate-950/50 text-xs text-slate-400">
-							<img src="Assets/Logos/PlumeLogo.png">
+							<img src="Assets/Logos/PlumeLogo.png" alt="Plume of Feathers logo" loading="lazy" decoding="async">
 						</div>
 						<div class="flex flex-wrap items-center justify-between gap-3 w-full">
 							<div>
@@ -374,7 +383,7 @@
                 <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
 					<div class="flex items-center gap-4">
 						<div class="flex h-12 w-12 items-center justify-center rounded-lg border border-white/10 bg-slate-950/50 text-xs text-slate-400">
-							<img src="Assets/Logos/McDonald's_Golden_Arches.svg.png">
+							<img src="Assets/Logos/McDonald's_Golden_Arches.svg.png" alt="McDonald's logo" loading="lazy" decoding="async">
 						</div>
 						<div class="flex flex-wrap items-center justify-between gap-3 w-full">
 							<div>
@@ -402,7 +411,7 @@
 				<div class="rounded-2xl border border-white/10 bg-white/5 p-6">
 					<div class="flex items-center gap-4">
 						<div class="flex h-12 w-12 items-center justify-center rounded-lg border border-white/10 bg-slate-950/50 text-xs text-slate-400">
-							<img src="Assets/Logos/Cardiff_University.svg">
+							<img src="Assets/Logos/Cardiff_University.svg" alt="Cardiff University logo" loading="lazy" decoding="async">
 						</div>
 						<div class="flex flex-wrap items-center justify-between gap-3 w-full">
 							<div>
@@ -697,7 +706,7 @@
     <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
         <div class="flex items-center gap-4">
             <div class="flex h-12 w-12 items-center justify-center rounded-lg border border-white/10 bg-slate-950/50 text-xs text-slate-400">
-                <img src="Assets/Logos/farnborough-logo.svg">
+                <img src="Assets/Logos/farnborough-logo.svg" alt="The Sixth Form College Farnborough logo" loading="lazy" decoding="async">
             </div>
             <div class="flex flex-wrap items-center justify-between gap-3 w-full">
                 <div>
@@ -867,8 +876,8 @@
 				<div class="mt-6 grid gap-6 md:grid-cols-2">
 					<div class="space-y-3 text-slate-300">
 						<p><span class="text-slate-200">Email:</span> <a class="hover:text-white" href="mailto:careers.jharvey@gmail.com">careers.jharvey@gmail.com</a></p>
-						<p><span class="text-slate-200">GitHub:</span> <a class="hover:text-white" href="https://github.com/RockWiCha2" target="_blank" rel="noreferrer">github.com/RockWiCha2</a></p>
-						<p><span class="text-slate-200">LinkedIn:</span> <a class="hover:text-white" href="https://www.linkedin.com/in/james-harvey-10b2b9317/" target="_blank" rel="noreferrer">linkedin.com/in/james-harvey-10b2b9317/</a></p>
+						<p><span class="text-slate-200">GitHub:</span> <a class="hover:text-white" href="https://github.com/RockWiCha2" target="_blank" rel="noreferrer noopener">github.com/RockWiCha2</a></p>
+						<p><span class="text-slate-200">LinkedIn:</span> <a class="hover:text-white" href="https://www.linkedin.com/in/james-harvey-10b2b9317/" target="_blank" rel="noreferrer noopener">linkedin.com/in/james-harvey-10b2b9317/</a></p>
 					</div>
 
 					<!-- Simple mailto form (no backend needed) -->
@@ -880,23 +889,31 @@
                         <input type="hidden" name="_subject" value="Portfolio contact form message" />
                         <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off" />
 
+                        <label class="sr-only" for="contact-name">Your name</label>
                         <input
+                            id="contact-name"
                             class="w-full rounded-xl border border-white/10 bg-slate-950/50 px-4 py-3 text-sm text-slate-100 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-white/20"
                             type="text"
                             name="name"
+                            autocomplete="name"
                             placeholder="Your name"
                             required
                         />
 
+                        <label class="sr-only" for="contact-email">Your email</label>
                         <input
+                            id="contact-email"
                             class="w-full rounded-xl border border-white/10 bg-slate-950/50 px-4 py-3 text-sm text-slate-100 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-white/20"
                             type="email"
                             name="email"
+                            autocomplete="email"
                             placeholder="Your email"
                             required
                         />
 
+                        <label class="sr-only" for="contact-message">Message</label>
                         <textarea
+                            id="contact-message"
                             class="min-h-[120px] w-full rounded-xl border border-white/10 bg-slate-950/50 px-4 py-3 text-sm text-slate-100 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-white/20"
                             name="message"
                             placeholder="Message"
@@ -904,7 +921,7 @@
                         ></textarea>
 
                         <button
-                            class="w-full rounded-xl bg-white px-4 py-3 text-sm font-medium text-slate-950 hover:bg-slate-200"
+                            class="w-full rounded-xl bg-white px-4 py-3 text-sm font-medium text-slate-950 hover:bg-slate-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
                             type="submit"
                         >
                             Send
