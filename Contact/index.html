@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Contact | James Harvey – Software Developer</title>
+  <meta name="description" content="Contact James Harvey, a Computer Science student. Software engineering, web development, and programming projects." />
+
+  <link rel="icon" type="image/png" href="../Assets/Logos/WebIcon.png">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-950 text-slate-100 antialiased">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
+      <a href="/" class="font-semibold tracking-tight">
+        JamesHarv.com
+      </a>
+
+      <nav class="hidden gap-6 text-sm text-slate-300 md:flex" aria-label="Primary">
+        <a href="/" class="hover:text-white">Home</a>
+        <a href="/projects/" class="hover:text-white">Projects</a>
+        <a href="/experience/" class="hover:text-white">Experience</a>
+        <a href="/education/" class="hover:text-white">Education</a>
+        <a href="/contact" class="hover:text-white">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a
+          href="https://github.com/RockWiCha2"
+          target="_blank"
+          rel="noreferrer noopener"
+          class="rounded-lg border border-white/10 px-3 py-2 text-sm text-slate-200 hover:bg-white/5"
+        >
+          GitHub
+        </a>
+        <a
+          href="/#contact"
+          class="rounded-lg bg-white px-3 py-2 text-sm font-medium text-slate-950 hover:bg-slate-200"
+        >
+          Hire me
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE CONTENT -->
+  <main class="mx-auto max-w-6xl px-4 py-14">
+
+    <!-- Contact -->
+        <div class="rounded-2xl border border-white/10 bg-gradient-to-b from-white/10 to-white/5 p-8">
+            <h2 class="text-2xl font-semibold tracking-tight">Contact</h2>
+            <p class="mt-2 text-slate-300">
+                If you’re hiring for software engineering / placement roles or summer internships, I’d love to chat.
+            </p>
+
+            <div class="mt-6 grid gap-6 md:grid-cols-2">
+                <div class="space-y-3 text-slate-300">
+                    <p><span class="text-slate-200">Email:</span> <a class="hover:text-white" href="mailto:careers.jharvey@gmail.com">careers.jharvey@gmail.com</a></p>
+                    <p><span class="text-slate-200">GitHub:</span> <a class="hover:text-white" href="https://github.com/RockWiCha2" target="_blank" rel="noreferrer noopener">github.com/RockWiCha2</a></p>
+                    <p><span class="text-slate-200">LinkedIn:</span> <a class="hover:text-white" href="https://www.linkedin.com/in/james-harvey-10b2b9317/" target="_blank" rel="noreferrer noopener">linkedin.com/in/james-harvey-10b2b9317/</a></p>
+                </div>
+
+                <!-- Simple mailto form (no backend needed) -->
+                <form
+                    class="space-y-3"
+                    action="https://formspree.io/f/mykgznnb"
+                    method="POST"
+                >
+                    <input type="hidden" name="_subject" value="Portfolio contact form message" />
+                    <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off" />
+
+                    <label class="sr-only" for="contact-name">Your name</label>
+                    <input
+                        id="contact-name"
+                        class="w-full rounded-xl border border-white/10 bg-slate-950/50 px-4 py-3 text-sm text-slate-100 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-white/20"
+                        type="text"
+                        name="name"
+                        autocomplete="name"
+                        placeholder="Your name"
+                        required
+                    />
+
+                    <label class="sr-only" for="contact-email">Your email</label>
+                    <input
+                        id="contact-email"
+                        class="w-full rounded-xl border border-white/10 bg-slate-950/50 px-4 py-3 text-sm text-slate-100 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-white/20"
+                        type="email"
+                        name="email"
+                        autocomplete="email"
+                        placeholder="Your email"
+                        required
+                    />
+
+                    <label class="sr-only" for="contact-message">Message</label>
+                    <textarea
+                        id="contact-message"
+                        class="min-h-[120px] w-full rounded-xl border border-white/10 bg-slate-950/50 px-4 py-3 text-sm text-slate-100 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-white/20"
+                        name="message"
+                        placeholder="Message"
+                        required
+                    ></textarea>
+
+                    <button
+                        class="w-full rounded-xl bg-white px-4 py-3 text-sm font-medium text-slate-950 hover:bg-slate-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+                        type="submit"
+                    >
+                        Send
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/10 py-10">
+    <div class="mx-auto max-w-6xl px-4 text-sm text-slate-400">
+      © <span id="year"></span> James Harvey · Software Developer
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
